@@ -1,0 +1,59 @@
+{
+    "name": "seerbit/seerbit-laravel",
+    "description": "SeerBit API Laravel SDK",
+    "keywords": [
+        "seerbit",
+        "seerbit-laravel",
+        "payment-gateway"
+    ],
+    "homepage": "https://github.com/seerbit/seerbit-laravel",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Victor Osas Ighalo",
+            "email": "victorighalo@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/support": "^5.5",
+        "seerbit/seerbit-php-sdk":"^2.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.8",
+        "phpunit/phpunit": "^7.5 || ^8.0 || ^9.0"
+    },
+    "autoload": {
+        "files": [
+            "src/Support/helpers.php"
+        ],
+        "psr-4": {
+            "SeerbitLaravel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SeerbitLaravel\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SeerbitLaravel\\SeerbitServiceProvider"
+            ],
+            "aliases": {
+                "SeerBit": "SeerbitLaravel\\Facades\\Seerbit"
+            }
+        }
+    }
+}
