@@ -7,4 +7,5 @@ coverage
 tests
 /.idea/*
 phpunit.xml
+mkdocs.yml
 

@@ -92,15 +92,18 @@ class Standard
         }
 }
 ```
-Find more examples [**here**](examples.md) 
+Full documentation can be found [**here**](https://seerbit.github.io/seerbit-laravel) 
+
+<br>
 
 ## Configure Logger ##
 ````php
 //Set Logger path in environment config file
 SEERBIT_LOGGER_PATH = ""
 ````
+<br>
 
-## Documentation ##
+## API Documentation ##
 * https://doc.seerbit.com/
 
 ### Changelog
