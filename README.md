@@ -14,6 +14,7 @@
 SeerBit PHP SDK for easy integration with SeerBit's API.
 
 ## Requirements
+This package can be used with Laravel 5.8 or higher
 PHP 7.1 or higher
 
 ## Installation
@@ -60,7 +61,12 @@ Replace them by changes the key values in your **.env** file.
 
 ###Standard checkout
 ``` php
+namespace App\Http\Controllers;
 
+use SeerbitLaravel\Facades\Seerbit;
+
+class Standard
+{
         public function Checkout(){
             try{
             $uuid = bin2hex(random_bytes(6));
@@ -84,6 +90,7 @@ Replace them by changes the key values in your **.env** file.
         }catch (\Exception $e){
            ;
         }
+}
 ```
 Find more examples [**here**](examples.md) 
 

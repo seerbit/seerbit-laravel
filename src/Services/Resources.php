@@ -20,7 +20,7 @@ class Resources
         self::$_client = $client;
     }
 
-    public static function GetBanks(){
+    public static function Banks(){
         self::$_client->setAuthType(\Seerbit\AuthType::BEARER);
         $service = new ResourceService(self::$_client);
         return $service->GetBankList()->toArray();

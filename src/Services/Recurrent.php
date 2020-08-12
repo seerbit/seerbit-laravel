@@ -49,10 +49,10 @@ class Recurrent
         return $service->UpdateSubscription($payload)->toArray();
     }
 
-    public static function ValidateStatus(array $payload){
+    public static function ValidateStatus(string $billingId){
         self::$_client->setAuthType(\Seerbit\AuthType::BEARER);
         $service = new \Seerbit\Service\Status\TransactionStatusService(self::$_client);
-        return $service->ValidateSubscriptionStatus($payload)->toArray();
+        return $service->ValidateSubscriptionStatus($billingId)->toArray();
     }
 
 }
