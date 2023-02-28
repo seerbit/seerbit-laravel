@@ -73,7 +73,7 @@ ENSURE YOU DO NOT PUBLISH YOUR ENV FILE TO YOUR GIT REPOSITORY
  
 ## Usage
 
-###Standard checkout
+### Standard checkout
 ``` php
 namespace App\Http\Controllers;
 
@@ -106,6 +106,7 @@ class Standard
         }
 }
 ```
+
 Full documentation can be found [**here**](https://seerbit.github.io/seerbit-laravel) 
 
 <br>
