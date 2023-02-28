@@ -3,8 +3,8 @@ This service provides access to making secure transactions by generating a check
 Add the NameSpace: **SeerbitLaravel\Facades\Seerbit** to your Class or Controller or Route in case you want to use the Facade.
 
 
-###Initialize transaction
->
+### Initialize transaction
+
 ```php
 namespace App\Http\Controllers;
 
@@ -40,12 +40,10 @@ class Standard
     }
 }
 ```
->
 
 
-###Validate transaction
+### Validate transaction
 
->
 ```php
 namespace App\Http\Controllers;
 
@@ -65,4 +63,3 @@ class Standard
     }
 }
 ```
->
