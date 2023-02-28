@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  app:
+    build:
+      args:
+        user: sammy
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: seerbit-laravel
+    container_name: seerbit-laravel-library
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
