@@ -9,17 +9,15 @@
       
       
       
-        <link rel="prev" href="../order/">
+        <link rel="prev" href="../standard/">
       
-      
-        <link rel="next" href="../standard/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
     
     
       
-        <title>Recurrent - SeerBit PHP Library</title>
+        <title>Tokenization - SeerBit PHP Library</title>
       
     
     
@@ -67,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create" class="md-skip">
+        <a href="#create-token" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Recurrent
+              Tokenization
             
           </span>
         </div>
@@ -259,83 +257,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Recurrent
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../recurrent/" class="md-nav__link">
         Recurrent
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#create" class="md-nav__link">
-    Create
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#charge" class="md-nav__link">
-    Charge
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-all-subscriptions-list" class="md-nav__link">
-    Get all Subscriptions list
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-customer-subscription" class="md-nav__link">
-    Get Customer subscription
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#update-a-subscription" class="md-nav__link">
-    Update a subscription
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#validate-subscription-status" class="md-nav__link">
-    Validate subscription status
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -361,11 +287,121 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../tokenization/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tokenization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Tokenization
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-token" class="md-nav__link">
+    Create Token
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tokenize-a-card" class="md-nav__link">
+    Tokenize a card
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-token" class="md-nav__link">
+    Get Token
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-details-of-tokenized-card" class="md-nav__link">
+    Get details of tokenized card
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charge-a-token" class="md-nav__link">
+    Charge a Token
+  </a>
+  
+    <nav class="md-nav" aria-label="Charge a Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charge-a-card-with-its-association-token" class="md-nav__link">
+    Charge a card with its association token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charge-a-token-bulk" class="md-nav__link">
+    Charge a Token Bulk
+  </a>
+  
+    <nav class="md-nav" aria-label="Charge a Token Bulk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charge-tokens-in-a-batch" class="md-nav__link">
+    Charge tokens in a batch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -395,44 +431,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create" class="md-nav__link">
-    Create
+  <a href="#create-token" class="md-nav__link">
+    Create Token
   </a>
+  
+    <nav class="md-nav" aria-label="Create Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tokenize-a-card" class="md-nav__link">
+    Tokenize a card
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#charge" class="md-nav__link">
-    Charge
+  <a href="#get-token" class="md-nav__link">
+    Get Token
   </a>
+  
+    <nav class="md-nav" aria-label="Get Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-details-of-tokenized-card" class="md-nav__link">
+    Get details of tokenized card
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-all-subscriptions-list" class="md-nav__link">
-    Get all Subscriptions list
+  <a href="#charge-a-token" class="md-nav__link">
+    Charge a Token
   </a>
+  
+    <nav class="md-nav" aria-label="Charge a Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charge-a-card-with-its-association-token" class="md-nav__link">
+    Charge a card with its association token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-customer-subscription" class="md-nav__link">
-    Get Customer subscription
+  <a href="#charge-a-token-bulk" class="md-nav__link">
+    Charge a Token Bulk
+  </a>
+  
+    <nav class="md-nav" aria-label="Charge a Token Bulk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charge-tokens-in-a-batch" class="md-nav__link">
+    Charge tokens in a batch
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#update-a-subscription" class="md-nav__link">
-    Update a subscription
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#validate-subscription-status" class="md-nav__link">
-    Validate subscription status
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -451,123 +525,95 @@
                   
 
 
-  <h1>Recurrent</h1>
+  <h1>Tokenization</h1>
 
-<p>Recurring payments are scheduled payments to pay for products or services that require payments on a regular basis. For example, a cardholder paying an on-demand movie or music streaming provider's subcription fee either weekly, monthly or annually.</p>
-<h3 id="create">Create</h3>
-<p>Create a subscription</p>
-<blockquote></blockquote>
+<p>The Card Tokenize and Charge API allows you to charge a tokenized payment.</p>
+<h3 id="create-token">Create Token</h3>
+<h5 id="tokenize-a-card">Tokenize a card</h5>
 <pre><code class="language-php">try{
 $uuid = bin2hex(random_bytes(6));
 $transaction_ref = strtoupper(trim($uuid));
 
 $payload =  [
-   &quot;cardNumber&quot; =&gt; &quot;2223000000000007&quot;, 
-   &quot;expiryMonth&quot; =&gt; &quot;05&quot;, 
-   &quot;callbackUrl&quot; =&gt; &quot;https://callback.url.com&quot;, 
-   &quot;expiryYear&quot; =&gt; &quot;21&quot;, 
-   &quot;cvv&quot; =&gt; &quot;100&quot;, 
-   &quot;amount&quot; =&gt; &quot;20&quot;, 
-   &quot;currency&quot; =&gt; &quot;NGN&quot;, 
-   &quot;productDescription&quot; =&gt; &quot;Medium HM&quot;, 
-   &quot;productId&quot; =&gt; &quot;mhmo&quot;, 
-   &quot;country&quot; =&gt; &quot;NG&quot;, 
-   &quot;startDate&quot; =&gt; &quot;2019-01-11&quot;, 
-   &quot;cardName&quot; =&gt; &quot;Bola Olat&quot;, 
-   &quot;billingCycle&quot; =&gt; &quot;DAILY&quot;, 
-   &quot;email&quot; =&gt; &quot;customer@email.com&quot;, 
-   &quot;customerId&quot; =&gt; &quot;199721652416534&quot;, 
-   &quot;billingPeriod&quot; =&gt; &quot;4&quot;,
+   &quot;amount&quot;: &quot;100.00&quot;,        
+   &quot;fullName&quot;: &quot;Anonymous Shopper&quot;,
+   &quot;mobileNumber&quot;: &quot;03447522256&quot;,
+   &quot;currency&quot;: &quot;NGN&quot;,
+   &quot;country&quot;: &quot;NG&quot;,
+   &quot;email&quot;: &quot;anonshopper@gmail.com&quot;,
+   &quot;paymentType&quot;: &quot;CARD&quot;,
+   &quot;cardNumber&quot;: &quot;6280511000000095&quot;,
+   &quot;expiryMonth&quot;: &quot;12&quot;,
+   &quot;expiryYear&quot;: &quot;26&quot;,
+   &quot;cvv&quot;: &quot;123&quot;,
+   &quot;pin&quot;: &quot;1234&quot;,
+   &quot;tokenize&quot;: true,
    &quot;paymentReference&quot; =&gt; $transaction_ref
 ];
 
-SeerBit::Recurrent()-&gt;CreateSubscription($payload);
+$tokenization_result = SeerBit::Tokenization()-&gt;CreateToken($payload);
 
 }catch (\Exception $e){
-
+echo $e-&gt;getMessage();
 }
 
 </code></pre>
-<blockquote></blockquote>
-<h3 id="charge">Charge</h3>
-<p>Charge a subscription</p>
-<blockquote></blockquote>
+<h3 id="get-token">Get Token</h3>
+<h5 id="get-details-of-tokenized-card">Get details of tokenized card</h5>
 <pre><code class="language-php">try{
 
+//transaction reference used when creating a token
+SeerBit::Tokenization()-&gt;GetToken($transaction_reference);
+
+}catch (\Exception $e){
+echo $e-&gt;getMessage();
+}
+
+</code></pre>
+<h3 id="charge-a-token">Charge a Token</h3>
+<h5 id="charge-a-card-with-its-association-token">Charge a card with its association token</h5>
+<pre><code class="language-php">try{
+$uuid = bin2hex(random_bytes(6));
+$transaction_ref = strtoupper(trim($uuid));
+
+//authorizationCode is a property in the response payload of GetToken
 $payload =  [
-   &quot;amount&quot; =&gt; &quot;20&quot;, 
-   &quot;currency&quot; =&gt; &quot;NGN&quot;, 
-   &quot;email&quot; =&gt; &quot;customer@email.com&quot;, 
-   &quot;paymentReference&quot; =&gt; &quot;REF_USED_TO_CREATE_A_SUBSCRIPTION&quot;, 
-   &quot;authorizationCode&quot; =&gt; &quot;54570064E849&quot; 
-]; 
-
-SeerBit::Recurrent()-&gt;ChargeSubscription($payload);
-
-}catch (\Exception $e){
-
-}
-
-</code></pre>
-<blockquote></blockquote>
-<h3 id="get-all-subscriptions-list">Get all Subscriptions list</h3>
-<blockquote></blockquote>
-<pre><code class="language-php">try{
-
-SeerBit::Recurrent()-&gt;GetMerchantSubscription();
-
-}catch (\Exception $e){
-
-}
-
-</code></pre>
-<blockquote></blockquote>
-<h3 id="get-customer-subscription">Get Customer subscription</h3>
-<blockquote></blockquote>
-<pre><code class="language-php">try{
-
-SeerBit::Recurrent()-&gt;GetCustomerSubscription($customerId);
-
-}catch (\Exception $e){
-
-}
-
-</code></pre>
-<blockquote></blockquote>
-<h3 id="update-a-subscription">Update a subscription</h3>
-<blockquote></blockquote>
-<pre><code class="language-php">try{
-
-$payload =  [
-   &quot;amount&quot; =&gt; &quot;20&quot;, 
-   &quot;currency&quot; =&gt; &quot;NGN&quot;, 
-   &quot;country&quot; =&gt; &quot;NG&quot;, 
-   &quot;status&quot; =&gt; &quot;INACTIVE&quot;, 
-   &quot;email&quot; =&gt; &quot;customer@email.com&quot;, 
-   &quot;billingId&quot; =&gt; &quot;199721652416534&quot;, 
-   &quot;mobileNumber&quot; =&gt; &quot;09339993322&quot; 
+ &quot;paymentReference&quot; =&gt; $transaction_ref, 
+ &quot;authorizationCode&quot; =&gt; &quot;authorizationCode&quot;, 
+ &quot;amount&quot; =&gt; &quot;100.00&quot;
 ];
 
-SeerBit::Recurrent()-&gt;UpdateSubscription($payload);
+$tokenization_result = SeerBit::Tokenization()-&gt;ChargeToken($payload);
 
 }catch (\Exception $e){
-
+echo $e-&gt;getMessage();
 }
 
 </code></pre>
-<blockquote></blockquote>
-<h3 id="validate-subscription-status">Validate subscription status</h3>
-<blockquote></blockquote>
+<h3 id="charge-a-token-bulk">Charge a Token Bulk</h3>
+<h5 id="charge-tokens-in-a-batch">Charge tokens in a batch</h5>
 <pre><code class="language-php">try{
-//billingId is gotten from a subscription
-SeerBit::Recurrent()-&gt;ValidateStatus($billingId);
+$uuid = bin2hex(random_bytes(6));
+$transaction_ref = strtoupper(trim($uuid));
+
+//authorizationCode is a property in the response payload of GetToken
+//$transaction_ref should be unique for each record
+ $payload = [
+  (object)[
+   'authorizationCode' =&gt; $authorizationCode,
+   'paymentReference' =&gt; $transaction_ref,
+   'amount' =&gt; '100.00',
+   'publicKey' =&gt; 'MERCHANT_PUBLIC_KEY'
+   ]
+ ];
+
+$tokenization_result = SeerBit::Tokenization()-&gt;ChargeTokenBulk($payload);
 
 }catch (\Exception $e){
-
+echo $e-&gt;getMessage();
 }
 
 </code></pre>
-<blockquote></blockquote>
 
 
 
