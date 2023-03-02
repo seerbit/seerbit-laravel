@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../LICENSE/">
+        <link rel="prev" href="../CHANGELOG/">
       
       
-        <link rel="next" href="../card/">
+        <link rel="next" href="../account/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
     
     
       
-        <title>Account - SeerBit PHP Library</title>
+        <title>LICENSE - SeerBit PHP Library</title>
       
     
     
@@ -66,11 +66,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#authorize" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Account
+              LICENSE
             
           </span>
         </div>
@@ -214,11 +209,19 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../LICENSE/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         LICENSE
       </a>
+      
     </li>
   
 
@@ -229,55 +232,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Account
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
         Account
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#authorize" class="md-nav__link">
-    Authorize
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#banks-list" class="md-nav__link">
-    Banks List
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -390,28 +349,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#authorize" class="md-nav__link">
-    Authorize
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#banks-list" class="md-nav__link">
-    Banks List
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -425,43 +362,25 @@
                   
 
 
-  <h1>Account</h1>
+  <h1>LICENSE</h1>
 
-<p>This service provides access to making secure transactions by collecting the shoppers bank account details and process the payment.</p>
-<h3 id="authorize">Authorize</h3>
-<blockquote></blockquote>
-<pre><code class="language-php">try{
-$uuid = bin2hex(random_bytes(6));
-$transaction_ref = strtoupper(trim($uuid));
-
-$payload = [
-   &quot;amount&quot; =&gt; &quot;1000.00&quot;, 
-   &quot;accountName&quot; =&gt; &quot;Customer Bank Account Name&quot;, 
-   &quot;accountNumber&quot; =&gt; &quot;1234567890&quot;, 
-   &quot;bankCode&quot; =&gt; &quot;033&quot;, 
-   &quot;currency&quot; =&gt; &quot;NGN&quot;, 
-   &quot;country&quot; =&gt; &quot;NG&quot;, 
-   &quot;email&quot; =&gt; &quot;customer@email.com&quot; ,
-   &quot;paymentReference&quot; =&gt; $transaction_ref
-]; 
-
-$trans = SeerBit::Account()-&gt;Authorize($payload);
-
-}catch (\Exception $e){
-
-}
-
-</code></pre>
-<blockquote></blockquote>
-<h3 id="banks-list">Banks List</h3>
-<blockquote></blockquote>
-<pre><code class="language-php">try{
-$trans = SeerBit::Resources()-&gt;Banks();
-}catch (\Exception $e){
-}
-
-</code></pre>
-<blockquote></blockquote>
+<p>MIT License</p>
+<p>Copyright (c) SeerBit</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
 
 
 

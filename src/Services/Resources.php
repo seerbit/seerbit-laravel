@@ -21,7 +21,6 @@ class Resources
     }
 
     public static function Banks(){
-        self::$_client->setAuthType(\Seerbit\AuthType::BEARER);
         $service = new ResourceService(self::$_client);
         return $service->GetBankList()->toArray();
     }
