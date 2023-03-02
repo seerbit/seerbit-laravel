@@ -6,4 +6,5 @@ coverage
 tests
 /.idea/*
 phpunit.xml
+example-app
 

@@ -30,7 +30,6 @@ class Card
      * @return mixed
      */
     public static function AuthorizeOnetime(array $payload){
-        self::$_client->setAuthType(\Seerbit\AuthType::BASIC);
         $service = new CardService(self::$_client);
         return $service->AuthorizeOneTime($payload)->toArray();
     }
@@ -40,7 +39,6 @@ class Card
      * @return mixed
      */
     public static function AuthorizeWithToken(array $payload){
-        self::$_client->setAuthType(\Seerbit\AuthType::BASIC);
         $service = new CardService(self::$_client);
         return $service->AuthorizeWithToken($payload)->toArray();
     }
@@ -50,7 +48,6 @@ class Card
      * @return mixed
      */
     public static function Capture(array $payload){
-        self::$_client->setAuthType(\Seerbit\AuthType::BASIC);
         $service = new CardService(self::$_client);
         return $service->Capture($payload)->toArray();
     }
@@ -69,7 +66,6 @@ class Card
      * @return mixed
      */
     public static function Refund(array $payload){
-        self::$_client->setAuthType(\Seerbit\AuthType::BASIC);
         $service = new CardService(self::$_client);
         return $service->Refund($payload)->toArray();
     }

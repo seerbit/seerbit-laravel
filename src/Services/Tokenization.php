@@ -20,7 +20,6 @@ class Tokenization implements TokenizationContract
     public function __construct(Client $client)
     {
         $_client = $client;
-        $_client->setAuthType(\Seerbit\AuthType::BEARER);
         self::$_service = new TokenizeService($_client);
     }
 

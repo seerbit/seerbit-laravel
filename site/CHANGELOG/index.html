@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../LICENSE/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../card/">
+        <link rel="next" href="../LICENSE/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
     
     
       
-        <title>Account - SeerBit PHP Library</title>
+        <title>Changelog - SeerBit PHP Library</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#authorize" class="md-skip">
+        <a href="#changelog" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Account
+              Changelog
             
           </span>
         </div>
@@ -199,11 +199,59 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../CHANGELOG/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Changelog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Changelog
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#200-2023-02-28" class="md-nav__link">
+    2.0.0 - 2023-02-28
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201-2023-03-02" class="md-nav__link">
+    2.0.1 - 2023-03-02
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -229,55 +277,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Account
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
         Account
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#authorize" class="md-nav__link">
-    Authorize
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#banks-list" class="md-nav__link">
-    Banks List
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -389,6 +393,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -397,15 +403,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#authorize" class="md-nav__link">
-    Authorize
+  <a href="#200-2023-02-28" class="md-nav__link">
+    2.0.0 - 2023-02-28
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#banks-list" class="md-nav__link">
-    Banks List
+  <a href="#201-2023-03-02" class="md-nav__link">
+    2.0.1 - 2023-03-02
   </a>
   
 </li>
@@ -425,43 +431,15 @@
                   
 
 
-  <h1>Account</h1>
-
-<p>This service provides access to making secure transactions by collecting the shoppers bank account details and process the payment.</p>
-<h3 id="authorize">Authorize</h3>
-<blockquote></blockquote>
-<pre><code class="language-php">try{
-$uuid = bin2hex(random_bytes(6));
-$transaction_ref = strtoupper(trim($uuid));
-
-$payload = [
-   &quot;amount&quot; =&gt; &quot;1000.00&quot;, 
-   &quot;accountName&quot; =&gt; &quot;Customer Bank Account Name&quot;, 
-   &quot;accountNumber&quot; =&gt; &quot;1234567890&quot;, 
-   &quot;bankCode&quot; =&gt; &quot;033&quot;, 
-   &quot;currency&quot; =&gt; &quot;NGN&quot;, 
-   &quot;country&quot; =&gt; &quot;NG&quot;, 
-   &quot;email&quot; =&gt; &quot;customer@email.com&quot; ,
-   &quot;paymentReference&quot; =&gt; $transaction_ref
-]; 
-
-$trans = SeerBit::Account()-&gt;Authorize($payload);
-
-}catch (\Exception $e){
-
-}
-
-</code></pre>
-<blockquote></blockquote>
-<h3 id="banks-list">Banks List</h3>
-<blockquote></blockquote>
-<pre><code class="language-php">try{
-$trans = SeerBit::Resources()-&gt;Banks();
-}catch (\Exception $e){
-}
-
-</code></pre>
-<blockquote></blockquote>
+<h1 id="changelog">Changelog</h1>
+<h2 id="200-2023-02-28">2.0.0 - 2023-02-28</h2>
+<ul>
+<li>This version updates support for PHP version 8.0 and above</li>
+</ul>
+<h2 id="201-2023-03-02">2.0.1 - 2023-03-02</h2>
+<ul>
+<li>Minor updates and bug fixes</li>
+</ul>
 
 
 

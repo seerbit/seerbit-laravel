@@ -201,6 +201,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../CHANGELOG/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LICENSE/" class="md-nav__link">
+        LICENSE
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../account/" class="md-nav__link">
         Account
       </a>
@@ -400,7 +430,6 @@
 <p>This service provides access to making secure transactions by generating a checkout link. With the link, you can then decide to redirect automatically or allow your shoppers to click a button before redirecting.</p>
 <p>Add the NameSpace: <strong>SeerbitLaravel\Facades\Seerbit</strong> to your Class or Controller or Route in case you want to use the Facade.</p>
 <h3 id="initialize-transaction">Initialize transaction</h3>
-<blockquote></blockquote>
 <pre><code class="language-php">namespace App\Http\Controllers;
 
 use SeerbitLaravel\Facades\Seerbit;
@@ -422,7 +451,8 @@ class Standard
                 &quot;email&quot; =&gt; &quot;customer@email.com&quot;,
                 &quot;paymentReference&quot; =&gt; $transaction_ref,
                 &quot;productDescription&quot; =&gt; &quot;product_description&quot;,
-                &quot;productId&quot; =&gt; &quot;64310880-2708933-427&quot;
+                &quot;productId&quot; =&gt; &quot;64310880-2708933-427&quot;,
+                &quot;tokenize&quot; =&gt; true //optional
             ];
 
             $trans = seerbit()-&gt;Standard()-&gt;Initialize($payload);
@@ -435,9 +465,7 @@ class Standard
     }
 }
 </code></pre>
-<blockquote></blockquote>
 <h3 id="validate-transaction">Validate transaction</h3>
-<blockquote></blockquote>
 <pre><code class="language-php">namespace App\Http\Controllers;
 
 use SeerbitLaravel\Facades\Seerbit;
@@ -456,7 +484,6 @@ class Standard
     }
 }
 </code></pre>
-<blockquote></blockquote>
 
 
 
