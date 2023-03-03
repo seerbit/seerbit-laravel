@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Log;
 use SeerbitLaravel\Facades\Seerbit;
 
 class seerBitController extends Controller
