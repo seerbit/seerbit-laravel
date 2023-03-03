@@ -33,7 +33,6 @@ class SeerbitServiceProvider extends ServiceProvider
         // Register the main class to use with the facade
         $this->app->singleton('seerbit', function () {
             $client = new SeerBitClient();
-            $client->setEnvironment(config('seerbit.environment'));
             $client->setToken(config('seerbit.token'));
             $client->setPublicKey(config('seerbit.public_key'));
             $client->setSecretKey(config('seerbit.secret_key'));
