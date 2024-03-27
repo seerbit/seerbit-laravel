@@ -98,12 +98,24 @@ class Standard
                 "tokenize" => true //optional
             ];
 
-            $trans = seerbit()->Standard()->Initialize($payload);
-            //Or with Facade
+            
+            // Initialize the payment with the Facade
+            // Or with Facade
             $trans = SeerBit::Standard()->Initialize($payload);
+
+            // You can get your redirect link for customer payment from $tran
+            $redirectLink = $trans['data']['payments']['redirectLink'];
+
+            //  Redirect to this link in order to complete the transaction
+            if (!empty($redirectLink)) {
+                return redirect($redirectLink)->with("status", $trans['data']['message']);
+            } else {
+                //  Something went wrong while initiating the transaction
+                return redirect()->back()->with('error', $trans['data']['message']);
+            }
         
         }catch (\Exception $e){
-           ;
+        //    Handle exception handling
         }
 }
 ```
