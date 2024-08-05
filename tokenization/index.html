@@ -1,0 +1,795 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../standard/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Tokenization - SeerBit PHP Library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-token" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SeerBit PHP Library" class="md-header__button md-logo" aria-label="SeerBit PHP Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SeerBit PHP Library
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tokenization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SeerBit PHP Library" class="md-nav__button md-logo" aria-label="SeerBit PHP Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    SeerBit PHP Library
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGELOG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LICENSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LICENSE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../card/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Card
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobile_money/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mobile money
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../order/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Order
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recurrent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recurrent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tokenization
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tokenization
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Token
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tokenize-a-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tokenize a card
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Token
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-details-of-tokenized-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get details of tokenized card
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charge-a-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charge a Token
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Charge a Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charge-a-card-with-its-association-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charge a card with its association token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charge-a-token-bulk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charge a Token Bulk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Charge a Token Bulk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charge-tokens-in-a-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charge tokens in a batch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Token
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tokenize-a-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tokenize a card
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Token
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-details-of-tokenized-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get details of tokenized card
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charge-a-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charge a Token
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Charge a Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charge-a-card-with-its-association-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charge a card with its association token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charge-a-token-bulk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charge a Token Bulk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Charge a Token Bulk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charge-tokens-in-a-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charge tokens in a batch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Tokenization</h1>
+
+<p>The Card Tokenize and Charge API allows you to charge a tokenized payment.</p>
+<p>Add the NameSpace: <strong>SeerbitLaravel\Facades\Seerbit</strong> to your Class or Controller or Route in case you want to use the Facade.</p>
+<h3 id="create-token">Create Token</h3>
+<h5 id="tokenize-a-card">Tokenize a card</h5>
+<pre><code class="language-php">try{
+$uuid = bin2hex(random_bytes(6));
+$transaction_ref = strtoupper(trim($uuid));
+
+$payload =  [
+   &quot;amount&quot;: &quot;100.00&quot;,        
+   &quot;fullName&quot;: &quot;Anonymous Shopper&quot;,
+   &quot;mobileNumber&quot;: &quot;03447522256&quot;,
+   &quot;currency&quot;: &quot;NGN&quot;,
+   &quot;country&quot;: &quot;NG&quot;,
+   &quot;email&quot;: &quot;anonshopper@gmail.com&quot;,
+   &quot;paymentType&quot;: &quot;CARD&quot;,
+   &quot;cardNumber&quot;: &quot;6280511000000095&quot;,
+   &quot;expiryMonth&quot;: &quot;12&quot;,
+   &quot;expiryYear&quot;: &quot;26&quot;,
+   &quot;cvv&quot;: &quot;123&quot;,
+   &quot;pin&quot;: &quot;1234&quot;,
+   &quot;tokenize&quot;: true,
+   &quot;paymentReference&quot; =&gt; $transaction_ref
+];
+
+$tokenization_result = SeerBit::Tokenization()-&gt;CreateToken($payload);
+
+}catch (\Exception $e){
+echo $e-&gt;getMessage();
+}
+
+</code></pre>
+<h3 id="get-token">Get Token</h3>
+<h5 id="get-details-of-tokenized-card">Get details of tokenized card</h5>
+<pre><code class="language-php">try{
+
+//transaction reference used when creating a token
+SeerBit::Tokenization()-&gt;GetToken($transaction_reference);
+
+}catch (\Exception $e){
+echo $e-&gt;getMessage();
+}
+
+</code></pre>
+<h3 id="charge-a-token">Charge a Token</h3>
+<h5 id="charge-a-card-with-its-association-token">Charge a card with its association token</h5>
+<pre><code class="language-php">try{
+$uuid = bin2hex(random_bytes(6));
+$transaction_ref = strtoupper(trim($uuid));
+
+//authorizationCode is a property in the response payload of GetToken
+$payload =  [
+ &quot;paymentReference&quot; =&gt; $transaction_ref, 
+ &quot;authorizationCode&quot; =&gt; &quot;authorizationCode&quot;, 
+ &quot;amount&quot; =&gt; &quot;100.00&quot;
+];
+
+$tokenization_result = SeerBit::Tokenization()-&gt;ChargeToken($payload);
+
+}catch (\Exception $e){
+echo $e-&gt;getMessage();
+}
+
+</code></pre>
+<h3 id="charge-a-token-bulk">Charge a Token Bulk</h3>
+<h5 id="charge-tokens-in-a-batch">Charge tokens in a batch</h5>
+<pre><code class="language-php">try{
+$uuid = bin2hex(random_bytes(6));
+$transaction_ref = strtoupper(trim($uuid));
+
+//authorizationCode is a property in the response payload of GetToken
+//$transaction_ref should be unique for each record
+ $payload = [
+  (object)[
+   'authorizationCode' =&gt; $authorizationCode,
+   'paymentReference' =&gt; $transaction_ref,
+   'amount' =&gt; '100.00',
+   'publicKey' =&gt; 'MERCHANT_PUBLIC_KEY'
+   ]
+ ];
+
+$tokenization_result = SeerBit::Tokenization()-&gt;ChargeTokenBulk($payload);
+
+}catch (\Exception $e){
+echo $e-&gt;getMessage();
+}
+
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
