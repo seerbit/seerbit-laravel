@@ -95,6 +95,7 @@ class Standard
                 "paymentReference" => $transaction_ref,
                 "productDescription" => "product_description",
                 "productId" => "64310880-2708933-427",
+                "fullName" => "John Doe",
                 "tokenize" => true //optional
             ];
 
