@@ -152,6 +152,7 @@ If you discover any security related issues, please email developers@seerbit.com
 ## Credits
 
 - [Victor Osas Ighalo](https://github.com/victorighalo)
+- [Emmanuel Ajiboye](https://github.com/Emitoz)
 
 ## License
 
