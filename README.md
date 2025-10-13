@@ -81,8 +81,8 @@ use SeerbitLaravel\Facades\Seerbit;
 
 class Standard
 {
-        public function Checkout(){
-            try{
+    public function Checkout(){
+        try {
             $uuid = bin2hex(random_bytes(6));
             $transaction_ref = strtoupper(trim($uuid));
             
@@ -114,10 +114,11 @@ class Standard
                 //  Something went wrong while initiating the transaction
                 return redirect()->back()->with('error', $trans['data']['message']);
             }
-        
-        }catch (\Exception $e){
+    
+        } catch (\Exception $e){
         //    Handle exception handling
         }
+    }
 }
 ```
 
