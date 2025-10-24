@@ -94,6 +94,7 @@ class Standard
                 "email" => "customer@email.com",
                 "paymentReference" => $transaction_ref,
                 "productDescription" => "product_description",
+                "fullName" => "John Doe",
                 "productId" => "64310880-2708933-427"
             ];
 

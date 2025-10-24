@@ -81,8 +81,8 @@ use SeerbitLaravel\Facades\Seerbit;
 
 class Standard
 {
-        public function Checkout(){
-            try{
+    public function Checkout(){
+        try {
             $uuid = bin2hex(random_bytes(6));
             $transaction_ref = strtoupper(trim($uuid));
             
@@ -95,6 +95,7 @@ class Standard
                 "paymentReference" => $transaction_ref,
                 "productDescription" => "product_description",
                 "productId" => "64310880-2708933-427",
+                "fullName" => "John Doe",
                 "tokenize" => true //optional
             ];
 
@@ -113,10 +114,11 @@ class Standard
                 //  Something went wrong while initiating the transaction
                 return redirect()->back()->with('error', $trans['data']['message']);
             }
-        
-        }catch (\Exception $e){
+    
+        } catch (\Exception $e){
         //    Handle exception handling
         }
+    }
 }
 ```
 
@@ -151,6 +153,7 @@ If you discover any security related issues, please email developers@seerbit.com
 ## Credits
 
 - [Victor Osas Ighalo](https://github.com/victorighalo)
+- [Emmanuel Ajiboye](https://github.com/Emitoz)
 
 ## License
 
