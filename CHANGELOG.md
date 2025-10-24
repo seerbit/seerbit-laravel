@@ -8,3 +8,6 @@
 
 ## 2.0.2 - 2023-03-03
 - Minor updates and bug fixes
+
+## 2.0.3 - 2025-10-24
+- Minor updates
