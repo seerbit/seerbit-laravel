@@ -15,8 +15,8 @@
 SeerBit PHP SDK for easy integration with SeerBit's API.
 
 ## Requirements
-This package can be used with Laravel 5.8 or higher
-PHP 8.0 or higher
+This package supports Laravel 12.x and newer compatible releases.
+PHP 8.3 or higher
 
 ## Installation
 
@@ -29,7 +29,7 @@ Once composer is installed, execute the following command in your project root t
 
 
 ```bash
-composer require seerbit/seerbit-laravel
+composer require seerbit/seerbit-laravel:^2.0.4
 ```
 
 The service provider will automatically register itself.
@@ -158,4 +158,3 @@ If you discover any security related issues, please email developers@seerbit.com
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
