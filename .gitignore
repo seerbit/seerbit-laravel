@@ -6,5 +6,4 @@ coverage
 tests
 /.idea/*
 phpunit.xml
-example-app
-
+!example-app/composer.lock
